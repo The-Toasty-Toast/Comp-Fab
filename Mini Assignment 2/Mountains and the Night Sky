@@ -1,0 +1,26 @@
+int counterS = 0;
+//int counterT = 0;
+int counterO = 0;
+void setup() {
+  size(500, 500);
+  frameRate(120);
+}
+
+void draw() {
+  background(2);
+  stroke(255);
+  //for loop for randomly placing the 25 stars in the top 3/5 of the frame
+  //star size ranging from 2-9
+  for (int s = counterS; s < 25; s+=1){
+     circle(random(500),random(300),random(2,9));
+  }
+  //second for loop to make the triangles and place them kind of randomly along the bottom
+ 
+    fill(130);
+    stroke(110);
+    for(int o=counterO; o<4; o+=1){
+    triangle(random(0,100),500,random(50,450),random(275,450),random(300,500),500);
+    }
+ 
+  noLoop();
+}
