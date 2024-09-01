@@ -1,0 +1,54 @@
+// Cluster Tree:
+/**
+ * The base code I used is called Recursive Tree by Daniel Shiffman. --> https://processing.org/examples/tree.html
+ * I changed the code and some of the major changes are as follows:
+ * remove mouse moment, set specific angles and lengths that generates a dense cluster of lines
+ */
+ 
+float theta;   
+
+void setup() {
+  size(650, 500);
+}
+
+void draw() {
+  background(0);
+  frameRate(30);
+  stroke(255);
+  // Angle of limb growth 
+  float a = (60);
+  // Convert a to radians put in variable theta
+  theta = radians(a);
+  // Start the tree at the bottom and middle of the screen
+  translate(width/2,height-50);
+  // starting single vertical line of 120 pixels
+  line(0,0,0,-200);
+  // The end of that single vertical line
+  translate(0,-200);
+  // Recursive branching size
+  branch(75);
+
+}
+
+void branch(float h) {
+  // Subsequent branch will be 0.8 the size of the previous one
+  h *= 0.80;
+  
+  // exit condition when the end branch gets to 5 pixels or below
+  if (h > 5) {
+    pushMatrix();    // "saves the current coordinate system to the stack"
+    rotate(theta);   // Rotate by theta 
+    line(0, 0, 0, -h);  // make new branch
+    translate(0, -h); // Move to the end of the branch
+    branch(h);       // Function called to draw one side of the new branches
+    popMatrix();     // "Pop" restores the prior coordinate system/ matrix state
+    
+    // Repeats the same thing, only branching off to the "left" 
+    pushMatrix();
+    rotate(-theta);
+    line(0, 0, 0, -h);
+    translate(0, -h);
+    branch(h);
+    popMatrix();
+  }
+}
