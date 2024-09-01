@@ -4,7 +4,7 @@
  * I changed the code and some of the major changes are as follows:
  * remove mouse moment, set specific angles and lengths that generates a dense cluster of lines
  */
- 
+import processing.svg.*;
 float theta;   
 
 void setup() {
