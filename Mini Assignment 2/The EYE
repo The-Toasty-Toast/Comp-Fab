@@ -1,0 +1,23 @@
+ void setup() {
+  size(500, 500);
+  stroke(255);
+  noFill();
+  background(0);
+  frameRate(30);
+  noLoop();
+}
+
+void draw() {
+for (int y = 0; y<=10; y+=1) {
+  for (int x = 0; x < 6; x+=1){
+// tells how many beziers and the spacing of them
+    for (int i = 0; i < 120; i += 20) {
+    //bezier(x1, y1, x2, y2, x3, y3, x4, y4)
+    //each time this is run it adds another bezier below the previous 
+      bezier(350, 350, 400, 300, 300, 200, i+100, 150);
+    }
+   rotate(45);
+   translate(150,-130);
+  }
+}
+}
