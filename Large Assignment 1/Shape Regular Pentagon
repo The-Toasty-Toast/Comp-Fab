@@ -1,3 +1,6 @@
+/*I thought the pentagon was actually easier to code than the triangle
+ because the line length and the angle could remain the same. 
+*/
 import Turtle.*;
 Turtle t; 
 
