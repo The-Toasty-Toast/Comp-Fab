@@ -1,6 +1,10 @@
-//Make a loop to look at the current character’s character by character and applying the rules of each new character. Then adding those rules into the buffer.  
-//if a character does not have an associated rule it will just add the current character (what getOrDefault is doing)
+/*Make a loop to look at the current character’s character by character and applying 
+the rules of each new character. Then adding those rules into the buffer.  
+if a character does not have an associated rule it will just add the current character 
+(what getOrDefault is doing)
 //Making the different cases with the turtle library functions  
+*/
+
 //File #4: LSystems
 
 // This is an implementation of an L-System that extends the class 
