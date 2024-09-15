@@ -1,0 +1,38 @@
+import Turtle.*;
+Turtle t; 
+
+void setup() {
+  size(500, 500);
+  background(0);
+  stroke(255);
+  strokeWeight(2);
+  t = new Turtle(this);
+}
+// I made this before we went over in class the draw function looped. 
+// interestingly enough the draw function seems to have a loop built in 
+//however this also means that the function is being called over and over 
+void draw() {
+    t.forward(50);
+    t.right(72);
+}
+//so this could be run with a loop or if statement as a counter
+
+//Or 
+
+/*
+import Turtle.*;
+Turtle t; 
+
+void setup() {
+  size(500, 500);
+  background(0);
+  stroke(255);
+  strokeWeight(2);
+  t = new Turtle(this);
+
+for (int c = 0; c<=4; c++){
+    t.forward(50);
+    t.right(72);
+  }
+}
+*/
