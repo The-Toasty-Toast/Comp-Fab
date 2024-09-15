@@ -1,0 +1,27 @@
+import Turtle.*;
+
+Turtle t; 
+
+void setup() {
+  size(800, 800);
+  background(0);
+  stroke(255);
+  strokeWeight(2);
+  t = new Turtle(this);
+// for the arm of the I
+  t.right(90);
+    t.forward(50);
+    t.penUp();
+//back to the center of the line
+    t.back(25);
+//turn to make the main form of the I
+    t.right(90);
+    t.penDown();
+    t.forward(100);
+    t.penUp();
+    t.left(90);
+    t.forward(25);
+    t.penDown();
+    t.back(50);
+    t.penUp();
+}
