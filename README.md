@@ -4,4 +4,4 @@
 <!-- Large Assignment 1-->
 <a href="https://github.com/The-Toasty-Toast/Comp-Fab/tree/main/Large%20Assignment%201">Large #1</a>
 <!-- Large Assignment 2-->
-<a href="https://github.com/The-Toasty-Toast/Comp-Fab/tree/main/Large%20Assingment%202">Large #1</a>
+<a href="https://github.com/The-Toasty-Toast/Comp-Fab/tree/main/Large%20Assingment%202">Large #2</a>
