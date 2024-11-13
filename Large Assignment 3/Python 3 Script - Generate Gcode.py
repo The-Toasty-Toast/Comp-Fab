@@ -224,10 +224,10 @@ def generate_gcode():
         # 1) BE INDEPENDENT MOVES(e.g., G1 Z# and not move with other positions like XYE) 
         # 2) USE THE `layer_change_feedrate`
         # 3) BE IN INCREASING ORDER
-#____________
+#______My stuff______
         if not are_floats_equal(current_position[2], line_start_position[2]): 
-            #new_move = [current_position[0], current_position[1], line_start_position[2]]
-            layer_move_up = gcode_move(current_position,(current_position[0], current_position[1], line_start_position[2]), feed_rate = layer_change_feed_rate, should_extrude=False)
+            new_move = [current_position[0], current_position[1], line_start_position[2]]
+            layer_move_up = gcode_move(current_position, new_move, feed_rate = layer_change_feed_rate, should_extrude=False)
             all_move_commands.append(layer_move_up) 
             #update z value 
             current_position[2] = line_start_position[2]
@@ -236,7 +236,7 @@ def generate_gcode():
             new_line = gcode_move(current_position, line_start_position, feed_rate = travel_feed_rate, should_extrude=False )
             all_move_commands.append(new_line)
             current_position = line_start_position
-#_______________
+#____________
         # Now if our current_position is not the start of our line segment
         # we need to move (travel) to the line segment's starting point
         if not is_same_pt(current_position, line_start_position):
@@ -249,20 +249,20 @@ def generate_gcode():
         # [TODO]: Once our extruder is at the start of the line, create a 
         # command to move AND extrude along 
         # the line segment using `extrusion_feed_rate`
-#__________       
+#______My stuff____       
         command = gcode_move(line_start_position, line_end_position, feed_rate = extrusion_feed_rate, should_extrude = True )
-#__________ 
+#___________________ 
 
         # [TODO]: Append the move command across the line segment 
-#__________ 
+#______My stuff____ 
         all_move_commands.append(command)
-#__________
+#_________________
         
         # [TODO]: Update the current position of our extruder to be at the end of the line
        
-#__________ 
+     #______My stuff____ 
         current_position = line_end_position
-#__________   
+#_________________   
     # End of for-loop above -- now create the full set of commands
 
 
@@ -270,12 +270,12 @@ def generate_gcode():
     # `all_move_commands`, combine the `start_gcode`, `all_move_commands`, and `end_gcode`
     # into one list called `gcode_lines`   
 
-#__________ 
+#______My stuff____ 
     gcode_lines = [] 
     gcode_lines.extend(start_gcode_lines)
     gcode_lines.extend(all_move_commands)
     gcode_lines.extend(end_gcode_lines)
-#__________
+#____________________
 
     # --- DO NOT EDIT BELOW ----
     # The takes the combined gcode_lines list and creates a string containing each line
