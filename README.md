@@ -9,3 +9,5 @@
 <a href="https://sites.google.com/colorado.edu/comp-fabrication-sophie-berry/documentation/mini-3-a-seat-at-the-table?authuser=3">Mini #3</a>
 <!-- Large Assignment 3-->
 <a href="https://sites.google.com/colorado.edu/comp-fabrication-sophie-berry/documentation/large-3-travel-through-another-dimension?authuser=3">Large #3</a>
+<!-- Final Project-->
+<a href="https://sites.google.com/colorado.edu/comp-fabrication-sophie-berry/documentation/final-project?authuser=3">Final Project</a>
